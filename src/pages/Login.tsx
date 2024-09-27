@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Navigate, useNavigate } from "react-router-dom";
-import img1 from "../assets/purple-circle.svg";
+//import img1 from "../assets/purple-circle.svg";
+import img from "../assets/circle.png";
 import toast, { Toaster } from "react-hot-toast";
 
 interface User {
@@ -102,7 +103,7 @@ const Login = () => {
 
 
   return (
-    <div className="flex bg-fuchsia-700 items-center justify-center min-h-screen">
+    <div className="flex bg-yellow-200 items-center justify-center min-h-screen">
 
           <div
             className={` bg-white h-3/4 flex items-center w-3/4 fixed rounded-full transition-all duration-500 ease-linear border-2 border-white`}
@@ -113,10 +114,10 @@ const Login = () => {
                 toggle ? "hidden" : "block"
               } `}
               >
-              <h1 className="text-fuchsia-700 text-3xl font-bold mb-8">Log in</h1>
+              <h1 className="text-yellow-700 text-3xl font-bold mb-8">Log in</h1>
               <form className="space-y-6 w-1/2">
                 <div>
-                  <label className="text-fuchsia-700 block text-sm font-medium leading-6">
+                  <label className="text-yellow-700 block text-sm font-medium leading-6">
                     Email address
                   </label>
                   <div className="mt-2">
@@ -135,7 +136,7 @@ const Login = () => {
 
                 <div>
                   <div className="flex items-center justify-between">
-                    <label className="block text-sm font-medium leading-6 text-fuchsia-700">
+                    <label className="block text-sm font-medium leading-6 text-yellow-700">
                       Password
                     </label>
                   </div>
@@ -158,7 +159,7 @@ const Login = () => {
                 <div>
                   <button
                     type="submit"
-                    className="flex w-full justify-center rounded-md bg-fuchsia-700 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-fuchsia-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    className="flex w-full justify-center rounded-md bg-yellow-400 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-yellow-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                     onClick={handleLogin}
                   >
                     Sign in
@@ -169,7 +170,7 @@ const Login = () => {
               <p className="mt-10 text-center text-sm text-gray-500">
                 Not a member?
                 <span
-                  className="font-semibold leading-6 text-fuchsia-300 hover:text-fuchsia-500 cursor-pointer"
+                  className="font-semibold leading-6 text-yellow-500 hover:text-yellow-600 cursor-pointer"
                   onClick={() => setToggle(!toggle)}
                 >
                   &nbsp; Sign up Now
@@ -186,10 +187,10 @@ const Login = () => {
                 toggle ? "block" : "hidden"
               }`}
             >
-              <h1 className="text-fuchsia-700 text-3xl font-bold mb-3">Sign up</h1>
+              <h1 className="text-yellow-700 text-3xl font-bold mb-3">Sign up</h1>
               <form className="space-y-4 w-1/2">
               <div>
-                  <label className="block text-sm font-medium leading-6 text-fuchsia-700">
+                  <label className="block text-sm font-medium leading-6 text-yellow-700">
                     Name
                   </label>
                   <div className="mt-1">
@@ -209,7 +210,7 @@ const Login = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium leading-6 text-fuchsia-700">
+                  <label className="block text-sm font-medium leading-6 text-yellow-700">
                     Email address
                   </label>
                   <div className="mt-1">
@@ -230,7 +231,7 @@ const Login = () => {
 
                 <div>
                   <div className="flex items-center justify-between">
-                    <label className="block text-sm font-medium leading-6 text-fuchsia-700">
+                    <label className="block text-sm font-medium leading-6 text-yellow-700">
                       Password
                     </label>
                   </div>
@@ -252,7 +253,7 @@ const Login = () => {
 
                 <div>
                   <div className="flex items-center justify-between">
-                    <label className="block text-sm font-medium leading-6 text-fuchsia-700">
+                    <label className="block text-sm font-medium leading-6 text-yellow-700">
                       Re-Enter Password &nbsp;
                       {signupPassword ? (
                         signupPassword === reenterPassword ? (
@@ -289,8 +290,8 @@ const Login = () => {
                     className={`flex w-full justify-center rounded-md px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm ${
                       signupPassword === reenterPassword &&
                       signupPassword !== ""
-                        ? "bg-fuchsia-700 hover:bg-fuchsia-500"
-                        : "bg-fuchsia-200 cursor-not-allowed"
+                        ? "bg-yellow-400 hover:bg-yellow-600"
+                        : "bg-yellow-200 cursor-not-allowed"
                     }`}
                     onClick={handleSignup}
                     disabled={
@@ -306,7 +307,7 @@ const Login = () => {
               <p className="mt-2 text-center text-sm text-gray-500">
                 Already have an account?
                 <span
-                  className="font-semibold leading-6 text-fuchsia-300 hover:text-fuchsia-500 cursor-pointer"
+                  className="font-semibold leading-6 text-yellow-500 hover:text-yellow-600 cursor-pointer"
                   onClick={() => setToggle(!toggle)}
                 >
                   &nbsp; Login
@@ -323,7 +324,7 @@ const Login = () => {
               }}
             >
               <img
-                src={img1}
+                src={img}
                 alt="login"
                 className="h-full w-full z-30 cursor-move"
                 onClick={() => setToggle(!toggle)}

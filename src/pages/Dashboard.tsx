@@ -51,10 +51,10 @@ const Dashboard = () => {
     }
   
     return (
-      <div className=" w-screen p-4 bg-fuchsia-700" style={{height:'100vh'}}>
+      <div className=" w-screen p-4 bg-yellow-200" style={{height:'100vh'}}>
         <div className='flex justify-center items-center'>
-            <h1 className="text-center text-white text-3xl font-bold mb-4">Notes Dashboard</h1>
-            <button className='absolute top-1 right-5 bg-white text-fuchsia-700 px-4 py-2 mt-4 rounded-md hover:bg-slate-200' onClick={handleLogout}>Logout</button>
+            <h1 className="text-center text-yellow-700 text-3xl font-bold mb-4">Notes Dashboard</h1>
+            <button className='absolute top-1 right-5 bg-white font-bold text-yellow-700 px-4 py-2 mt-4 rounded-md hover:bg-slate-200' onClick={handleLogout}>Logout</button>
         </div>
         <div className=' flex' style={{height:'88vh'}}>
   
