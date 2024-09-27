@@ -52,32 +52,37 @@ const Dashboard = () => {
   
     return (
       <div className=" w-screen p-4 bg-yellow-200" style={{height:'100vh'}}>
-        <div className='flex justify-center items-center'>
-            <h1 className="text-center text-yellow-700 text-3xl font-bold mb-4">Notes Dashboard</h1>
-            <button className='absolute top-1 right-5 bg-white font-bold text-yellow-700 px-4 py-2 mt-4 rounded-md hover:bg-slate-200' onClick={handleLogout}>Logout</button>
-        </div>
-        <div className=' flex' style={{height:'88vh'}}>
-  
-        <div className='flex flex-col w-1/2'>
-          <div className=' pr-4 pl-4'>
-            <NoteFilter filterNotes={filterNotes} />
+          {/* Header and Logout button */}
+          <div className='flex justify-center items-center'>
+              <h1 className="text-center text-yellow-700 text-3xl font-bold mb-4">Notes Dashboard</h1>
+              <button className='absolute top-1 right-5 bg-white font-bold text-yellow-700 px-4 py-2 mt-4 rounded-md hover:bg-slate-200' onClick={handleLogout}>Logout</button>
           </div>
-  
-          <div className=' overflow-auto pr-4 pl-4 m-1'>
-              <div className='bg-white rounded-lg p-4 ' style={{minHeight:'79vh'}}>
-                <NoteList notes={filteredNotes} onEdit={handleEdit} onDelete={deleteNote} />
+
+          {/* Note Form, Note Filter and Note List */}
+          <div className='flex' style={{height:'88vh'}}>
+
+              {/* Note Filter and Note List */}
+              <div className='flex flex-col w-1/3'>
+                <div className=' pr-4 pl-4'>
+                  <NoteFilter filterNotes={filterNotes} />
+                </div>
+        
+                <div className=' overflow-auto pr-4 pl-4 m-1'>
+                    <div className='bg-white rounded-lg p-4 border-2 border-yellow-300 shadow-lg' style={{minHeight:'79vh'}}>
+                      <NoteList notes={filteredNotes} onEdit={handleEdit} onDelete={deleteNote} />
+                    </div>
+                </div>
               </div>
-          </div>
-        </div>
-          
-        <div className=' w-1/2 h-full' >
-          <NoteForm
-            addNote={addNote}
-            editNote={editNote}
-            noteToEdit={noteToEdit}
-            clearEdit={clearEdit}
-            />
-        </div>
+              
+              {/* Note Form */}
+              <div className=' w-2/3 h-full' >
+                <NoteForm
+                  addNote={addNote}
+                  editNote={editNote}
+                  noteToEdit={noteToEdit}
+                  clearEdit={clearEdit}
+                  />
+              </div>
 
         </div>
       </div>
@@ -85,3 +90,4 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
