@@ -1,0 +1,23 @@
+import React from 'react';
+import { FaEdit, FaTrash } from 'react-icons/fa';
+import { NoteType } from '../types';
+
+interface NoteProps {
+  note: NoteType;
+  onEdit: (id: number) => void;
+  onDelete: (id: number) => void;
+}
+
+const Note: React.FC<NoteProps> = ({ note, onEdit, onDelete }) => {
+  return (
+    <div className="note-card bg-yellow-100 shadow-md p-4 rounded-lg">
+      <p>{note.content}</p>
+      <div className="note-actions mt-2 flex justify-end">
+        <FaEdit className="text-blue-500 cursor-pointer mx-2" onClick={() => onEdit(note.id)} />
+        <FaTrash className="text-red-500 cursor-pointer" onClick={() => onDelete(note.id)} />
+      </div>
+    </div>
+  );
+};
+
+export default Note;
