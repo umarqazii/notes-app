@@ -31,9 +31,9 @@ const NoteForm: React.FC<NoteFormProps> = ({ addNote, editNote, noteToEdit, clea
   };
 
   return (
-    <form className="note-form p-4 bg-white rounded-lg shadow-lg" onSubmit={handleSubmit}>
+    <form className="note-form p-4 bg-white rounded-lg shadow-lg" style={{height:'100%'}} onSubmit={handleSubmit}>
       <textarea
-        className="w-full p-2 border-2 rounded-lg"
+        className="w-full p-2 border-2 rounded-lg h-5/6"
         value={content}
         onChange={(e) => setContent(e.target.value)}
         placeholder="Write your note here..."

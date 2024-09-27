@@ -8,7 +8,7 @@ const NoteFilter: React.FC<NoteFilterProps> = ({ filterNotes }) => {
   return (
     <input
       type="text"
-      className="filter-input w-full p-2 border-2 rounded-lg mb-4"
+      className="filter-input p-2 border-2 rounded-lg mb-4 w-full"
       onChange={(e) => filterNotes(e.target.value)}
       placeholder="Search notes..."
     />
